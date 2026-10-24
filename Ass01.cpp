@@ -12,7 +12,7 @@ private:
 
 public:
 
-    // Constructor
+  
     Student()
     {
         name = "Not Available";
@@ -27,7 +27,7 @@ public:
         cout << "\n[Constructor] Student object created successfully.\n";
     }
 
-    // User-defined function to enter student details
+
     void inputDetails()
     {
         cout << "\n========================================\n";
@@ -60,7 +60,7 @@ public:
         cout << "\nStudent details saved successfully!\n";
     }
 
-    // User-defined function to calculate percentage
+    
     void calculatePercentage()
     {
         float total = 0;
@@ -73,7 +73,7 @@ public:
         percentage = total / 3;
     }
 
-    // User-defined function to calculate grade
+  
     char calculateGrade()
     {
         if (percentage >= 90)
@@ -98,7 +98,7 @@ public:
         }
     }
 
-    // User-defined function to display student report
+
     void displayDetails()
     {
         cout << "\n========================================\n";
@@ -133,7 +133,7 @@ public:
         cout << "========================================\n";
     }
 
-    // Destructor
+  
     ~Student()
     {
         cout << "\n[Destructor] Student object destroyed successfully.\n";
@@ -150,7 +150,7 @@ int main()
     cout << "           C++ OOP PRACTICAL 01\n";
     cout << "============================================\n";
 
-    // Creating object
+ 
     Student student;
 
     int choice;
