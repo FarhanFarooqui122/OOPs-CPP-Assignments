@@ -1,0 +1,12 @@
+# build artifacts
+*.exe
+*.o
+*.obj
+*.out
+*.ilk
+*.pdb
+a.out
+
+# editor files
+.vscode/
+.idea/
