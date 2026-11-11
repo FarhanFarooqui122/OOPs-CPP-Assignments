@@ -37,3 +37,9 @@ Ass01.exe
 ```
 
 Compiled binaries and object files are ignored by git — build artifacts are not committed.
+
+## Notes
+
+- There is no `Ass04.cpp` — assignment 4 is the file named `assignment4.cpp`.
+- Every program needs a C++11-or-newer compiler (they use move semantics); `g++ -std=c++17` and
+  Visual Studio 2019+ both build them unchanged.
