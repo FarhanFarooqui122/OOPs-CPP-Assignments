@@ -25,6 +25,17 @@ Lab assignments for the Object-Oriented Programming with C++ course. Each file i
 | 11 | `Ass11.cpp` | STL containers | `Book` records in a `list`, prices in a `vector` |
 | 12 | `Ass12.cpp` | Type casting | Menu-driven unit conversion using implicit and explicit casts |
 
+### Standard headers used
+
+| Headers | Files |
+| --- | --- |
+| `<iostream>` only | `Ass03.cpp`, `Ass12.cpp`, `assignment4.cpp` |
+| `<iostream>`, `<string>` | `Ass01.cpp`, `Ass02.cpp`, `Ass05.cpp`, `Ass06.cpp`, `Ass07.cpp`, `Ass08.cpp`, `Ass10.cpp` |
+| `<iostream>`, `<string>`, `<utility>` | `Ass09.cpp` (uses `std::move`) |
+| `<iostream>`, `<list>`, `<vector>`, `<string>` | `Ass11.cpp` |
+
+Nothing else is pulled in — no third-party libraries, no shared headers.
+
 ## Build and run
 
 Requires a C++ compiler: g++ (MinGW), MSVC or clang.
