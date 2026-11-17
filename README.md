@@ -52,6 +52,17 @@ Get-ChildItem *.cpp | ForEach-Object {
 
 Compiled binaries and object files are ignored by git — build artifacts are not committed.
 
+### Compiler flags
+
+`-std=c++17` is enough for every file. Add warnings while reading or modifying one:
+
+```bash
+g++ -std=c++17 -Wall -Wextra Ass01.cpp -o Ass01
+```
+
+`Ass12.cpp` exits with code **1** on invalid input instead of re-prompting, so scripted runs should check
+`$LASTEXITCODE` (PowerShell) or `$?` (bash).
+
 ## Notes
 
 - There is no `Ass04.cpp` — assignment 4 is the file named `assignment4.cpp`.
