@@ -63,6 +63,27 @@ Get-ChildItem *.cpp | ForEach-Object {
 
 Compiled binaries and object files are ignored by git — build artifacts are not committed.
 
+## Running them
+
+| Program | Reads input | Menu loop |
+| --- | --- | --- |
+| `Ass01.cpp` | yes | yes (1 enter / 2 report / 3 exit) |
+| `Ass02.cpp` | yes | no |
+| `Ass03.cpp` | yes | yes |
+| `assignment4.cpp` | yes | no |
+| `Ass05.cpp` | yes | no |
+| `Ass06.cpp` | yes | no |
+| `Ass07.cpp` | yes | no |
+| `Ass08.cpp` | yes | yes |
+| `Ass09.cpp` | **no** — runs start to finish | no |
+| `Ass10.cpp` | yes | no |
+| `Ass11.cpp` | yes | yes |
+| `Ass12.cpp` | yes | yes (1–5, 5 = exit) |
+
+The menu programs loop until you pick Exit, and `Ass01.cpp` keeps printing "Invalid choice" forever if
+stdin hits EOF — run them in an interactive terminal (or pipe a trailing `exit` choice) rather than
+redirecting an empty file into them.
+
 ### Compiler flags
 
 `-std=c++17` is enough for every file. Add warnings while reading or modifying one:
