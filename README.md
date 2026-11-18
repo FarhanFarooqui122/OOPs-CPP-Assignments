@@ -36,6 +36,23 @@ Lab assignments for the Object-Oriented Programming with C++ course. Each file i
 
 Nothing else is pulled in — no third-party libraries, no shared headers.
 
+### Size at a glance
+
+| File | Lines |
+| --- | --- |
+| `Ass09.cpp` | 42 |
+| `Ass10.cpp` | 49 |
+| `assignment4.cpp` | 57 |
+| `Ass05.cpp` | 64 |
+| `Ass12.cpp` | 71 |
+| `Ass02.cpp` | 79 |
+| `Ass03.cpp` | 85 |
+| `Ass07.cpp` | 92 |
+| `Ass08.cpp` | 104 |
+| `Ass01.cpp` | 149 |
+| `Ass11.cpp` | 154 |
+| `Ass06.cpp` | 242 |
+
 ## Build and run
 
 Requires a C++ compiler: g++ (MinGW), MSVC or clang.
