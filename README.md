@@ -20,7 +20,7 @@ Lab assignments for the Object-Oriented Programming with C++ course. Each file i
 | 6 | `Ass06.cpp` | Inheritance | `Person` → `Student` / `Teacher`, plus `Exam` over student data |
 | 7 | `Ass07.cpp` | Polymorphism | Virtual functions with `override`, function overloading |
 | 8 | `Ass08.cpp` | Encapsulation | `BankAccount` with private state and public operations |
-| 9 | `Ass09.cpp` | Move semantics | Copy vs. move constructor for a student record transfer |
+| 9 | `Ass09.cpp` | Move semantics | `Student` records handed between objects with `std::move`; no copy or move constructor is written by hand |
 | 10 | `Ass10.cpp` | Templates | Function template for maximum marks, class template for results |
 | 11 | `Ass11.cpp` | STL containers | `Book` records in a `list`, prices in a `vector` |
 | 12 | `Ass12.cpp` | Type casting | Menu-driven unit conversion using implicit and explicit casts |
@@ -133,3 +133,22 @@ plain `if` checks — `Ass12.cpp` is the one that responds to bad input by exiti
 - Every program needs a C++11-or-newer compiler; `g++ -std=c++17` and Visual Studio 2019+ build them unchanged.
 - Some programs are menu-driven and read from `cin`, so run them in an interactive terminal rather than piping input blindly.
 - Programs are independent: there is no shared header, namespace or Makefile between them.
+
+## Quick quiz
+
+One question per program, with the answer — useful before a viva:
+
+| # | Question | Answer |
+| --- | --- | --- |
+| 1 | Which file turns marks into a percentage? | `Ass01.cpp` — `class Student` holding name, roll number and marks |
+| 2 | Where are default and parameterized constructors shown side by side? | `Ass02.cpp` — `Employee` |
+| 3 | How is complex-number addition expressed? | `Ass03.cpp` — a member `operator+` that returns a new `Complex` |
+| 4 | What differs between the two swap demos? | `assignment4.cpp` — one swaps through `int&`, the other through `int*` and dereferences |
+| 5 | Which program reads another class's private data without inheritance? | `Ass05.cpp` — `friend` class `Result` over `Student`, plus a `static` counter |
+| 6 | Which program has multiple inheritance? | `Ass06.cpp` — `Result : public Exam, public Sports`, with `Exam : public Student` |
+| 7 | Where is runtime polymorphism? | `Ass07.cpp` — a `virtual` function in `Person` overridden with `override` in `Student` / `Teacher` |
+| 8 | How does the bank reject a bad withdrawal? | `Ass08.cpp` — `runtime_error` for insufficient funds, `invalid_argument` for non-positive amounts |
+| 9 | What does `Ass09.cpp` actually demonstrate? | `std::move` at the call sites; the move constructor used is the compiler-generated one |
+| 10 | Function template vs class template? | `Ass10.cpp` — `findMaximum<T>()` for marks, `Student<T>` for the result |
+| 11 | Which containers are used? | `Ass11.cpp` — `std::list<Book>` for records, `std::vector<double>` for prices |
+| 12 | Which cast styles appear? | `Ass12.cpp` — implicit conversion, `static_cast`, and a C-style explicit cast |
