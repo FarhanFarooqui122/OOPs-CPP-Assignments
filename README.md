@@ -112,6 +112,21 @@ g++ -std=c++17 -Wall -Wextra Ass01.cpp -o Ass01
 `Ass12.cpp` exits with code **1** on invalid input instead of re-prompting, so scripted runs should check
 `$LASTEXITCODE` (PowerShell) or `$?` (bash).
 
+## Error handling
+
+Only `Ass08.cpp` throws exceptions, and every one is deliberate:
+
+| Trigger | Exception |
+| --- | --- |
+| Constructor called with a negative balance | `invalid_argument("Initial balance cannot be negative.")` |
+| Deposit ≤ 0 | `invalid_argument("Deposit amount must be positive.")` |
+| Withdrawal ≤ 0 | `invalid_argument("Withdrawal amount must be positive.")` |
+| Withdrawal larger than the balance | `runtime_error("Insufficient account balance.")` |
+| Non-numeric menu choice or amount | `runtime_error("Invalid menu input.")` / `runtime_error("Invalid amount input.")` |
+
+`main()` catches them and prints the message instead of crashing. The other programs validate input with
+plain `if` checks — `Ass12.cpp` is the one that responds to bad input by exiting with code **1**.
+
 ## Notes
 
 - There is no `Ass04.cpp` — assignment 4 is the file named `assignment4.cpp`.
